@@ -59,10 +59,17 @@
             <div class="hidden md:block mt-3 md:mt-0  md:flex-row md:items-center order-2 flex flex-col"
                 id="nav-content">
 
-                <a class="inline-block text-sm md:text-base no-underline text-gray-800 hover:text-gray-500"
-                    href="#projects">
+                <a id="project" class="inline-block text-sm md:text-base no-underline text-gray-800 hover:text-gray-500"
+                    onclick="dropdownVisibility()" href="#">
                     PROJECTS
+                    <div id="drop" onmouseleave="dropdownVisibility()"
+                        class="relative md:absolute text-gray-800 border border-gray-300 bg-white mt-2 p-2 rounded hidden flex flex-col">
+                        <a class="py-1" href="#network">Network Projects</a>
+                        <hr class="py-1" />
+                        <a class="py-1" href="#software">Software Projects</a>
+                    </div>
                 </a>
+
 
                 <a class="pt-2 text-sm md:text-base md:pt-0 md:pl-3 inline-block no-underline text-gray-800 hover:text-gray-500"
                     href="#experience">
@@ -573,6 +580,10 @@
 
 
     const showContent = document.getElementById('nav-content')
+    const dropdown = document.getElementById('drop')
+    // document.getElementById('project').addEventListener('click', function (event) {
+    //     dropdownVisibility()
+    // })
     document.getElementById('button').addEventListener('click', function (event) {
         toggleVisibility()
     })
@@ -593,4 +604,16 @@
             showContent.classList.add('hidden');
         }
     }
+
+    function dropdownVisibility() {
+        if (dropdown.classList.contains('hidden')) {
+            dropdown.classList.remove('hidden');
+            dropdown.classList.add('visible');
+
+        } else {
+            dropdown.classList.remove('visible');
+            dropdown.classList.add('hidden');
+        }
+    }
+
 </script>
