@@ -20,7 +20,19 @@
         li {
             margin-top: 5px;
         }
+
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
+
+    <script>
+        document.querySelector('#experience').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest',
+        });
+    </script>
 
 </head>
 
@@ -34,7 +46,7 @@
             <div class=" flex flex-wrap md:items-center md:w-auto w-full order-1 md:order-1" id="menu">
                 <nav class="flex flex-row w-full">
                     <ul class="flex-1 items-center justify-between text-base text-white pt-4 md:pt-0">
-                        <li class="inline-block font-bold text-sm text-gray-800 md:text-xl no-underline hover:text-gray-500 py-1"
+                        <li class="inline-block font-bold text-lg text-gray-800 md:text-xl no-underline hover:text-gray-500 py-1"
                             href="index.html">
                             UYAAM MAALIK</li>
                     </ul>
@@ -49,23 +61,24 @@
             <div class="hidden md:block mt-3 md:mt-0  md:flex-row md:items-center order-2 flex flex-col"
                 id="nav-content">
 
-                <a class="inline-block text-xs md:text-base no-underline text-gray-800 hover:text-gray-500" href="#">
+                <a class="inline-block text-sm md:text-base no-underline text-gray-800 hover:text-gray-500"
+                    href="#projects">
                     PROJECTS
                 </a>
 
-                <a class="pt-2 text-xs md:text-base md:pt-0 md:pl-3 inline-block no-underline text-gray-800 hover:text-gray-500"
+                <a class="pt-2 text-sm md:text-base md:pt-0 md:pl-3 inline-block no-underline text-gray-800 hover:text-gray-500"
+                    href="#experience">
+                    EXPERIENCES
+                </a>
+                <a class="pt-2 text-sm md:text-base md:pt-0 md:pl-3 inline-block no-underline text-gray-800 hover:text-gray-500"
                     href="#">
                     EDUCATION
                 </a>
-                <a class="pt-2 text-xs md:text-base md:pt-0 md:pl-3 inline-block no-underline text-gray-800 hover:text-gray-500"
-                    href="#">
-                    EXPERIENCES
-                </a>
-                <a class="pt-2 text-xs md:text-base md:pt-0 md:pl-3 inline-block no-underline text-gray-800 hover:text-gray-500"
+                <a class="pt-2 text-sm md:text-base md:pt-0 md:pl-3 inline-block no-underline text-gray-800 hover:text-gray-500"
                     href="#">
                     SKILLS
                 </a>
-                <a class="pt-2 text-xs md:text-base md:pt-0 md:pl-3 inline-block no-underline text-gray-800 hover:text-gray-500"
+                <a class="pt-2 text-sm md:text-base md:pt-0 md:pl-3 inline-block no-underline text-gray-800 hover:text-gray-500"
                     href="#">
                     PRO.QUALIFICATIONS
                 </a>
@@ -74,11 +87,12 @@
         </div>
     </nav>
     <div style="background-image: url('back.jpg'); background-size: cover;" class="mt-1">
-        <div class="md:w-8/12 bg-white bg-opacity-90 flex flex-wrap px-8 pt-8 mx-auto">
-            <div data-aos-duration="1000" data-aos="fade-right" class="w-full md:w-1/2 px-8 md:px-0">
+        <div class="md:w-8/12 bg-white bg-opacity-90 flex flex-wrap md:pt-8 pt-8 mx-auto">
+            <div data-aos-duration="1000" data-aos="fade-right" class="w-full md:w-1/2 px-12 md:px-0">
                 <img src="myphoto.jpg" />
             </div>
-            <div data-aos-duration="1000" data-aos="fade-left" class="bg-gray-600 w-full md:w-1/2 mx-auto p-3 md:p-14">
+            <div data-aos-duration="1000" data-aos="fade-left"
+                class="bg-gray-600 w-full md:w-1/2 mx-auto p-8 md:pt-20 md:px-14">
                 <h2 class="text-lg font-bold md:text-xl">UYAAM MAALIK</h2>
                 <p data-aos-duration="1000" data-aos="fade-up" class="mt-5">
                     <span class="text-sm font-bold md:text-lg">Telephone:</span><br>
@@ -112,376 +126,410 @@
             </div>
 
         </div>
-        <div class="bg-gray-300 text-gray-800 pb-16  w-full mx-auto items-center">
-            <div class="w-2/5 mx-auto  ">
-                <p class="text-center font-bold text-4xl pt-20">Hello! I'm Uyaam</p>
-                <p data-aos-duration="1000" data-aos="fade-up" class="text-center pt-10">With 2.5
-                    years as a demonstrator, 9 months as an
-                    executive, and 6
-                    months as a trainee
-                    software
-                    developer, pursuing MSc in Cyber Security with a BSc (Hons) in the same field. Skilled in OOP,
-                    Laravel, MySQL, Firebase, PHP, Java, JavaScript, Python, Docker, Linux, Vulnerability Assessment,
-                    Penetration Testing, Switching and Routing, Linux / Windows Server, and good knowledge in
-                    Security Frameworks such as ISO-27001 and NIST.</p>
+        <div class="bg-gray-300 text-gray-800 pb-6 md:pb-16  md:w-full md:mx-auto items-center">
+            <div class="mx-2 mb-2 md:w-2/5 md:mx-auto  ">
+                <p class="text-center font-bold text-xl md:text-4xl pt-10 md:pt-20">Hello! I'm Uyaam</p>
+                <p data-aos-duration="1000" data-aos="fade-up"
+                    class="text-justify md:text-center m-3 md:m-0 pt-5 md:pt-10">
+                    Having
+                    published a conference
+                    paper and undertaken a network infrastructure enhancement project, I bring 2.5 years of experience
+                    as a demonstrator, 9 months as an executive, and 6 months as a trainee software developer. I have
+                    also developed 2 Laravel projects and a ReactJS project. Pursuing an MSc in Cyber Security with a
+                    BSc (Hons) in the same field, I am also skilled in OOP, Laravel, MySQL, Firebase, PHP, Java,
+                    JavaScript, Python, Docker, Linux, Vulnerability Assessment, Penetration Testing, Switching and
+                    Routing, Linux/Windows Server, and have a good knowledge in Security Frameworks such as ISO-27001
+                    and NIST.</p>
             </div>
         </div>
 
     </div>
+    <!-- Project Star here -->
+    <section id="projects">
 
-    <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
-        <div class="text-gray-800 w-3/5 mx-auto items-center pt-8 pb-10">
-            <p class="font-bold text-2xl text-center pb-2">PROJECTS</p>
-            <hr>
-        </div>
-    </div>
-    <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
-        <div class="text-gray-800 w-3/5 mx-auto items-center pt-2 ">
-            <p class="font-bold text-xl text-center pb-2">NETWORK PROJECTS</p>
-
-        </div>
-    </div>
-
-    <hr class="pb-14" />
-    <div class="flex flex-wrap w-4/5 text-gray-800 mx-auto mb-10">
-        <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false" class="flex-none text-right">
-            <span class="mr-8 font-bold text-lg"> Network Infrastructure Enhancement</span>
-            <span class="mr-8"> <i class="fa-solid fa-arrow-right"></i></span>
-        </div>
-        <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="false" class="flex-1 text-justify">
-            <span data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="font-bold text-md">Project
-                Overview</span><br>
-            I had the opportunity to lead and manage a comprehensive network project aimed at enhancing the overall
-            infrastructure of ABS Constructions. The project included the following key components:<br>
-            <br>
-            <span data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="font-bold">Network
-                Configuration:</span>
-            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 mb-2">
-                <li>Conducted a thorough assessment of the existing network infrastructure.</li>
-                <li>Designed and implemented improvements to optimize network performance and security.</li>
-            </ul>
-
-
-
-
-            <span data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="font-bold">User and User
-                Group Configuration:</span>
-            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6">
-                <li>Analyzed user requirements and established user profiles and groups.</li>
-                <li>Implemented a user authentication system to enhance security.</li>
-                <li>Configured access controls and permissions based on the principle of least privilege.</li>
-            </ul>
-
-
-
-
-            <span data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="font-bold">Shared Folder
-                Setup:</span>
-            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 mb-2">
-                <li>Collaborated with various departments to understand their file-sharing needs.</li>
-                <li>Implemented a shared folder system to facilitate efficient collaboration.</li>
-                <li>Configured access rights to ensure data confidentiality and integrity.</li>
-            </ul>
-
-
-
-            <span data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="font-bold">Permission
-                Management:</span>
-            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 mb-2">
-                <li>Developed a comprehensive permission management strategy.</li>
-                <li>Regularly audited and updated permissions to align with organizational changes.</li>
-            </ul>
-
-
-
-            <span data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="font-bold">Data Backup
-                Implementation:</span>
-            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 mb-2">
-                <li>Designed and implemented a robust data backup strategy.</li>
-                <li>Configured automated backup processes to safeguard critical data.</li>
-                <li>Conducted periodic tests and drills to ensure data recoverability in case of emergencies.</li>
-            </ul>
-            <br>
-            <span data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="font-bold">Challenges:</span>
-
-
-            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6">
-                <li>Identified and addressed compatibility issues with legacy systems.</li>
-                <li>Ensured minimal disruption to daily operations during the implementation phase.</li>
-            </ul>
-            <br>
-            <span data-aos="fade-up" data-aos-duration="1000" data-aos-once="false"
-                class="font-bold">Achievements:</span>
-            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6">
-                <li>Successfully improved network efficiency, resulting in reduced downtime and increased productivity.
-                </li>
-                <li>Enhanced data security through the implementation of advanced access controls.</li>
-                <li>Received positive feedback from end-users regarding the improved collaboration and data access
-                    experience.</li>
-                <li>Implemented a reliable data backup system, mitigating the risk of data loss.</li>
-            </ul>
-
-
-
-
-        </div>
-    </div>
-    <div class="text-gray-800 w-3/5 mx-auto items-center pt-2">
-        <p data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="font-bold text-LG text-center pb-2">
-            SOFTWARE PROJECTS</p>
-
-    </div>
-    <hr class=" pb-6 md:pb-14" />
-    <div class="flex flex-wrap md:w-3/5 text-gray-800 mx-auto">
-        <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
-            class="md:flex-1 mx-3 md:mr-0 text-justify md:text-right">
-            <span class=" md:mr-8 font-bold text-sm md:text-lg"> Movie and TV Series Applicaiton</span>
-            <span class="mr-8 text-sm"> <i class="fa-solid fa-arrow-right"></i></span>
-            <p class="md:mr-20 mt-2 text-xs md:text-base">The web application is a dynamic platform that enables users
-                to seamlessly search for movies and TV series. Leveraging The Movie Database (TMDb) API, it provides
-                users with detailed
-                information, including trailers and ratings, enhancing their decision-making process. With an intuitive
-                interface and robust search functionality, users can effortlessly explore and enjoy their favorite
-                content.
-            </p>
-        </div>
-        <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="false" class="md:flex-1 mx-3 md:mr-0">
-            <span class="font-bold text-xs md:text-base">Technologies Used:</span>
-            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-xs md:text-base">
-                <li>Laravel 10</li>
-                <li>Tailwind CSS</li>
-                <li>Livewire</li>
-                <li>The Movie Database (TMDb) API</li>
-            </ul>
-
-            <span class="font-bold text-xs md:text-base">Features:</span>
-            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-xs md:text-base">
-                <li>Browsing movies and TV shows from TMDb.</li>
-                <li>Watch Trailer and Ratings</li>
-                <li>Browing Casting Details</li>
-            </ul>
-
-            <span class="font-bold text-xs md:text-base">Deployment:</span>
-            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-xs md:text-base">
-                <li>Planning to host</li>
-                <li><span class="font-bold">GitHub:</span> https://github.com/uyaammaalik/movieapp</li>
-            </ul>
+        <div id="" data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
+            <div class="text-gray-800 w-3/5 mx-auto items-center pt-4 pb-4 md:pt-8 md:pb-10">
+                <p class="font-bold text-xl md:text-2xl text-center pb-2">PROJECTS</p>
+                <hr>
+            </div>
         </div>
 
-    </div>
-    <div class="md:w-10/12  mx-3 md:mr-0 md:mx-auto font-bold mt-5 text-gray-800 text-xs md:text-base">Screenshots</div>
-    <div class="flex flex-wrap md:w-10/12 mt-2 md:mt-5 mx-3 md:mx-auto">
+        <!-- Network project start here -->
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
+            <div class="text-gray-800 w-full px-4 md:px-0 md:w-3/5 mx-auto items-center pt-2 ">
+                <p class="font-bold text-lg md:text-xl text-center pb-2">NETWORK PROJECTS</p>
 
-        <div data-aos="fade-up-right" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/3 p-1">
-            <img src="movie/movieapp1.png" />
-        </div>
-        <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/3 p-1">
-            <img src="movie/movieapp6.png" />
-        </div>
-        <div data-aos="fade-up-left" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/3 p-1">
-            <img src="movie/movieapp2.png" />
-        </div>
-        <div data-aos="fade-down-right" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/3 p-1">
-            <img src="movie/movieapp3.png" />
-        </div>
-        <div data-aos="fade-down" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/3 p-1">
-            <img src="movie/movieapp4.png" />
-        </div>
-        <div data-aos="fade-down-left" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/3 p-1">
-            <img src="movie/movieapp5.png" />
+            </div>
         </div>
 
-    </div>
-    <hr class="md:w-3/5 md:mx-auto mt-4" />
-    <div class="flex flex-wrap mt-3 md:mt-6 w-full md:w-3/5 text-gray-800 mx-auto">
-
-        <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
-            class="md:flex-1 mx-3 md:mr-0 text-justify md:text-right">
-            <span class=" md:mr-8 font-bold text-sm md:text-lg"> Todo List</span>
-            <span class="mr-8 text-sm"> <i class="fa-solid fa-arrow-right"></i></span>
-            <p class="md:mr-20 mt-2 text-xs md:text-base">The Laravel TodoList project is a dynamic web application
-                designed for efficient task management. Developed with Laravel 10, Bootstrap, and Eloquent for
-                database relationships.
-            </p>
-        </div>
-        <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="false" class="flex-1 mx-3 md:mr-0">
-            <span class="font-bold text-xs md:text-base">Technologies Used:</span>
-            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-xs md:text-base">
-                <li>Laravel 10</li>
-                <li>Bootstrap</li>
-                <li>Eloquent Database Relationship</li>
-            </ul>
-
-            <span class="font-bold text-xs md:text-base">Database Structure:</span>
-            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-xs md:text-base">
-                <li><span class="font-bold">Tasks Table: </span>Contains task details such as title, description, due
-                    date, and completion status.</li>
-            </ul>
-
-            <span class="font-bold text-xs md:text-base">Eloquent Relationships:</span>
-            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-xs md:text-base">
-                <li><span class="font-bold">User-Task Relationship:
-                    </span>Establishes a one-to-many relationship, allowing each user to have multiple tasks.
-                </li>
-            </ul>
-            <span class="font-bold text-xs md:text-base">User Interface:</span>
-            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-xs md:text-base">
-                <li>Responsive Design
-                </li>
-                <li><span class="font-bold">Task Listing:
-                    </span>Users can view and interact with their tasks through an organized and intuitive task listing
-                    interface.
-                </li>
-            </ul>
-            <span class="font-bold text-xs md:text-base">Deployment:</span>
-            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-xs md:text-base">
-                <li>Planning to host</li>
-                <li><span class="font-bold">GitHub:</span> https://github.com/uyaammaalik/to_do_list</li>
-            </ul>
-        </div>
-
-    </div>
-    <div class="md:w-10/12  mx-3 md:mr-0 md:mx-auto font-bold mt-5 text-gray-800 text-xs md:text-base">Screenshots</div>
-    <div class="flex flex-wrap md:w-10/12 mt-2 md:mt-5 mx-3 md:mx-auto">
-
-        <div data-aos="fade-up-right" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/3 p-1">
-            <img src="todolist/1.png" />
-        </div>
-        <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/3 p-1">
-            <img src="todolist/2.png" />
-        </div>
-        <div data-aos="fade-up-left" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/3 p-1">
-            <img src="todolist/3.png" />
-        </div>
-        <div data-aos="fade-down-right" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/3 p-1">
-            <img src="todolist/4.png" />
-        </div>
-        <div data-aos="fade-down" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/3 p-1">
-            <img src="todolist/5.png" />
-        </div>
-
-    </div>
-    <hr class="md:w-3/5 md:mx-auto mt-4" />
+        <hr class="pb-4 md:pb-14" />
+        <div class="flex flex-wrap mx-3 md:w-4/5 text-gray-800 md:mx-auto mb-10">
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
+                class="flex flex-wrap md:flex-none md:text-right">
+                <span class="md:flex-4 mr-8 font-bold text-base md:text-lg"> Network Infrastructure Enhancement</span>
+                <span class="md:flex-1 hidden md:block mr-8 "> <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+            <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="false" class="md:flex-1 md:text-justify">
+                <span data-aos="fade-up" data-aos-duration="1000" data-aos-once="false"
+                    class="font-bold text-base md:text-md">Project
+                    Overview</span><br>
+                <span class="text-sm md:text-md text-justify mx-4 md:mx-0">I had the opportunity to lead and manage a
+                    comprehensive
+                    network
+                    project
+                    aimed at enhancing the overall
+                    infrastructure of ABS Constructions. The project included the following key components:</span><br>
+                <br>
+                <span data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="font-bold">Network
+                    Configuration:</span>
+                <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 mb-2">
+                    <li>Conducted a thorough assessment of the existing network infrastructure.</li>
+                    <li>Designed and implemented improvements to optimize network performance and security.</li>
+                </ul>
 
 
 
-    <div class="flex flex-wrap mt-3 md:mt-6 w-full md:w-3/5 text-gray-800 mx-auto">
 
-        <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
-            class="md:flex-1 mx-3 md:mr-0 text-justify md:text-right">
-            <span class=" md:mr-8 font-bold text-sm md:text-lg">Crypto Currency Details</span>
-            <span class="mr-8 text-sm"> <i class="fa-solid fa-arrow-right"></i></span>
-            <p class="md:mr-20 mt-2 text-xs md:text-base">The CryptoCurrency Explorer is a web application developed
-                using ReactJS, Bootstrap, and the Coingecko Cryptocurrency API. It provides users with a seamless
-                platform to explore and obtain detailed information about various cryptocurrencies, including their
-                real-time values converted to Sri Lankan Rupees (LKR).
-            </p>
-        </div>
-        <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="false" class="flex-1 mx-3 md:mr-0">
-            <span class="font-bold text-xs md:text-base">Technologies Used:</span>
-            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-xs md:text-base">
-                <li>ReactJS</li>
-                <li>Bootstrap</li>
-                <li>Coingecko Cryptocurrency API</li>
-            </ul>
-
-            <span class="font-bold text-xs md:text-base">Key Features:</span>
-            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-xs md:text-base">
-                <li>Crypto Search</li>
-                <li>Real-time Data</li>
-                <li>Bootstrap Styling</li>
-                <li>Currency Conversion</li>
-            </ul>
+                <span data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="font-bold">User and User
+                    Group Configuration:</span>
+                <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6">
+                    <li>Analyzed user requirements and established user profiles and groups.</li>
+                    <li>Implemented a user authentication system to enhance security.</li>
+                    <li>Configured access controls and permissions based on the principle of least privilege.</li>
+                </ul>
 
 
-            <span class="font-bold text-xs md:text-base">Deployment:</span>
-            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-xs md:text-base">
-                <li><span class="font-bold">Site:</span> https://uyaamcrypto.netlify.app/</li>
-                <li><span class="font-bold">GitHub:</span> https://github.com/uyaammaalik/cryptocurrency</li>
-            </ul>
+
+
+                <span data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="font-bold">Shared Folder
+                    Setup:</span>
+                <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 mb-2">
+                    <li>Collaborated with various departments to understand their file-sharing needs.</li>
+                    <li>Implemented a shared folder system to facilitate efficient collaboration.</li>
+                    <li>Configured access rights to ensure data confidentiality and integrity.</li>
+                </ul>
+
+
+
+                <span data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="font-bold">Permission
+                    Management:</span>
+                <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 mb-2">
+                    <li>Developed a comprehensive permission management strategy.</li>
+                    <li>Regularly audited and updated permissions to align with organizational changes.</li>
+                </ul>
+
+
+
+                <span data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="font-bold">Data Backup
+                    Implementation:</span>
+                <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 mb-2">
+                    <li>Designed and implemented a robust data backup strategy.</li>
+                    <li>Configured automated backup processes to safeguard critical data.</li>
+                    <li>Conducted periodic tests and drills to ensure data recoverability in case of emergencies.</li>
+                </ul>
+                <br>
+                <span data-aos="fade-up" data-aos-duration="1000" data-aos-once="false"
+                    class="font-bold">Challenges:</span>
+
+
+                <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6">
+                    <li>Identified and addressed compatibility issues with legacy systems.</li>
+                    <li>Ensured minimal disruption to daily operations during the implementation phase.</li>
+                </ul>
+                <br>
+                <span data-aos="fade-up" data-aos-duration="1000" data-aos-once="false"
+                    class="font-bold">Achievements:</span>
+                <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6">
+                    <li>Successfully improved network efficiency, resulting in reduced downtime and increased
+                        productivity.
+                    </li>
+                    <li>Enhanced data security through the implementation of advanced access controls.</li>
+                    <li>Received positive feedback from end-users regarding the improved collaboration and data access
+                        experience.</li>
+                    <li>Implemented a reliable data backup system, mitigating the risk of data loss.</li>
+                </ul>
+
+
+
+
+            </div>
         </div>
 
-    </div>
-    <div class="md:w-10/12  mx-3 md:mr-0 md:mx-auto font-bold mt-5 text-gray-800 text-xs md:text-base">Screenshots</div>
-    <div class="flex flex-wrap md:w-10/12 mt-1 md:mt-5 mx-3 md:mx-auto">
+        <!-- Software project start here -->
+        <div class="text-gray-800 w-3/5 mx-auto items-center pt-2">
+            <p data-aos="fade-up" data-aos-duration="1000" data-aos-once="false"
+                class="font-bold text-lg md:text-xl text-center pb-2">
+                SOFTWARE PROJECTS</p>
 
-        <div data-aos="fade-up-right" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/2 p-1">
-            <img src="crypto/1.png" />
         </div>
-        <div data-aos="fade-up-left" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/2 p-1">
-            <img src="crypto/2.png" />
+        <hr class=" pb-6 md:pb-14" />
+        <div class="flex flex-wrap md:w-3/5 text-gray-800 mx-auto">
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
+                class="md:flex-1 mx-3 md:mr-0 text-justify md:text-right">
+                <span class=" md:mr-8 font-bold text-base md:text-lg"> Movie and TV Series Applicaiton</span>
+                <span class="mr-8 text-sm"> <i class="fa-solid fa-arrow-right"></i></span>
+                <p class="md:mr-20 mt-2 text-sm md:text-base">The web application is a dynamic platform that enables
+                    users
+                    to seamlessly search for movies and TV series. Leveraging The Movie Database (TMDb) API, it provides
+                    users with detailed
+                    information, including trailers and ratings, enhancing their decision-making process. With an
+                    intuitive
+                    interface and robust search functionality, users can effortlessly explore and enjoy their favorite
+                    content.
+                </p>
+            </div>
+            <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="false" class="md:flex-1 mx-3 md:mr-0">
+                <span class="font-bold text-sm md:text-base">Technologies Used:</span>
+                <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-sm md:text-base">
+                    <li>Laravel 10</li>
+                    <li>Tailwind CSS</li>
+                    <li>Livewire</li>
+                    <li>The Movie Database (TMDb) API</li>
+                </ul>
+
+                <span class="font-bold text-sm md:text-base">Features:</span>
+                <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-sm md:text-base">
+                    <li>Browsing movies and TV shows from TMDb.</li>
+                    <li>Watch Trailer and Ratings</li>
+                    <li>Browing Casting Details</li>
+                </ul>
+
+                <span class="font-bold text-sm md:text-base">Deployment:</span>
+                <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-sm md:text-base">
+                    <li>Planning to host</li>
+                    <li><span class="font-bold">GitHub:</span> https://github.com/uyaammaalik/movieapp</li>
+                </ul>
+            </div>
+
         </div>
-    </div>
-    <hr class="md:w-3/5 md:mx-auto mt-4" />
-    <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
-        <div class="text-gray-800 w-3/5 mx-auto items-center pt-8 pb-10">
-            <p class="font-bold text-2xl text-center pb-2">EXPERIENCES</p>
-            <hr>
+        <div class="md:w-10/12  mx-3 md:mr-0 md:mx-auto font-bold mt-5 text-gray-800 text-sm md:text-base">Screenshots
         </div>
-    </div>
+        <div class="flex flex-wrap md:w-10/12 mt-2 md:mt-5 mx-3 md:mx-auto">
 
-    <div class="flex flex-wrap md:mt-6 w-full md:w-3/5 text-gray-800 mx-auto">
+            <div data-aos="fade-up-right" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/3 p-1">
+                <img src="movie/movieapp1.png" />
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/3 p-1">
+                <img src="movie/movieapp6.png" />
+            </div>
+            <div data-aos="fade-up-left" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/3 p-1">
+                <img src="movie/movieapp2.png" />
+            </div>
+            <div data-aos="fade-down-right" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/3 p-1">
+                <img src="movie/movieapp3.png" />
+            </div>
+            <div data-aos="fade-down" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/3 p-1">
+                <img src="movie/movieapp4.png" />
+            </div>
+            <div data-aos="fade-down-left" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/3 p-1">
+                <img src="movie/movieapp5.png" />
+            </div>
 
-        <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
-            class="md:flex-1 mx-3 md:mr-0 text-justify md:text-right">
-            <span class=" md:mr-8 font-bold text-sm md:text-lg">September 2020 to March 2023</span>
-            <span class="mr-8 text-sm"> <i class="fa-solid fa-arrow-right"></i></span>
-            <p class="md:mr-20 mt-2 text-xs md:text-base">Temporary Demonstrator</p>
         </div>
-        <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="false" class="flex-1 mx-3 md:mr-0">
-            <span class="font-bold text-xs md:text-base">South Eastern University
-                of Sri Lanka</span>
-            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-xs md:text-base">
-                <li>Led tutorials and hands-on sessions for network and
-                    software topics, simplifying complex ideas for student
-                    understanding.</li>
-                <li>Encouraged practical application of theory, cultivating
-                    active engagement and a positive learning atmosphere.</li>
-            </ul>
+        <hr class="md:w-3/5 md:mx-auto mt-4" />
+
+        <!-- first software project ends here -->
+        <div class="flex flex-wrap mt-3 md:mt-6 w-full md:w-3/5 text-gray-800 mx-auto">
+
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
+                class="md:flex-1 mx-3 md:mr-0 text-justify md:text-right">
+                <span class=" md:mr-8 font-bold text-base md:text-lg"> Todo List</span>
+                <span class="mr-8 text-sm"> <i class="fa-solid fa-arrow-right"></i></span>
+                <p class="md:mr-20 mt-2 text-sm md:text-base">The Laravel TodoList project is a dynamic web application
+                    designed for efficient task management. Developed with Laravel 10, Bootstrap, and Eloquent for
+                    database relationships.
+                </p>
+            </div>
+            <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="false" class="flex-1 mx-3 md:mr-0">
+                <span class="font-bold text-sm md:text-base">Technologies Used:</span>
+                <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-sm md:text-base">
+                    <li>Laravel 10</li>
+                    <li>Bootstrap</li>
+                    <li>Eloquent Database Relationship</li>
+                </ul>
+
+                <span class="font-bold text-sm md:text-base">Database Structure:</span>
+                <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-sm md:text-base">
+                    <li><span class="font-bold">Tasks Table: </span>Contains task details such as title, description,
+                        due
+                        date, and completion status.</li>
+                </ul>
+
+                <span class="font-bold text-sm md:text-base">Eloquent Relationships:</span>
+                <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-sm md:text-base">
+                    <li><span class="font-bold">User-Task Relationship:
+                        </span>Establishes a one-to-many relationship, allowing each user to have multiple tasks.
+                    </li>
+                </ul>
+                <span class="font-bold text-sm md:text-base">User Interface:</span>
+                <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-sm md:text-base">
+                    <li>Responsive Design
+                    </li>
+                    <li><span class="font-bold">Task Listing:
+                        </span>Users can view and interact with their tasks through an organized and intuitive task
+                        listing
+                        interface.
+                    </li>
+                </ul>
+                <span class="font-bold text-sm md:text-base">Deployment:</span>
+                <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-sm md:text-base">
+                    <li>Planning to host</li>
+                    <li><span class="font-bold">GitHub:</span> https://github.com/uyaammaalik/to_do_list</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="md:w-10/12  mx-3 md:mr-0 md:mx-auto font-bold mt-5 text-gray-800 text-sm md:text-base">Screenshots
+        </div>
+        <div class="flex flex-wrap md:w-10/12 mt-2 md:mt-5 mx-3 md:mx-auto">
+
+            <div data-aos="fade-up-right" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/3 p-1">
+                <img src="todolist/1.png" />
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/3 p-1">
+                <img src="todolist/2.png" />
+            </div>
+            <div data-aos="fade-up-left" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/3 p-1">
+                <img src="todolist/3.png" />
+            </div>
+            <div data-aos="fade-down-right" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/3 p-1">
+                <img src="todolist/4.png" />
+            </div>
+            <div data-aos="fade-down" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/3 p-1">
+                <img src="todolist/5.png" />
+            </div>
+
+        </div>
+        <hr class="md:w-3/5 md:mx-auto mt-4" />
+
+        <!-- second software project ends here -->
+
+        <div class="flex flex-wrap mt-3 md:mt-6 w-full md:w-3/5 text-gray-800 mx-auto">
+
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
+                class="md:flex-1 mx-3 md:mr-0 text-justify md:text-right">
+                <span class=" md:mr-8 font-bold text-base md:text-lg">Crypto Currency Details</span>
+                <span class="mr-8 text-sm"> <i class="fa-solid fa-arrow-right"></i></span>
+                <p class="md:mr-20 mt-2 text-sm md:text-base">The CryptoCurrency Explorer is a web application developed
+                    using ReactJS, Bootstrap, and the Coingecko Cryptocurrency API. It provides users with a seamless
+                    platform to explore and obtain detailed information about various cryptocurrencies, including their
+                    real-time values converted to Sri Lankan Rupees (LKR).
+                </p>
+            </div>
+            <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="false" class="flex-1 mx-3 md:mr-0">
+                <span class="font-bold text-sm md:text-base">Technologies Used:</span>
+                <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-sm md:text-base">
+                    <li>ReactJS</li>
+                    <li>Bootstrap</li>
+                    <li>Coingecko Cryptocurrency API</li>
+                </ul>
+
+                <span class="font-bold text-sm md:text-base">Key Features:</span>
+                <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-sm md:text-base">
+                    <li>Crypto Search</li>
+                    <li>Real-time Data</li>
+                    <li>Bootstrap Styling</li>
+                    <li>Currency Conversion</li>
+                </ul>
+
+
+                <span class="font-bold text-sm md:text-base">Deployment:</span>
+                <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-sm md:text-base">
+                    <li><span class="font-bold">Site:</span> https://uyaamcrypto.netlify.app/</li>
+                    <li><span class="font-bold">GitHub:</span> https://github.com/uyaammaalik/cryptocurrency</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="md:w-10/12  mx-3 md:mr-0 md:mx-auto font-bold mt-5 text-gray-800 text-sm md:text-base">Screenshots
+        </div>
+        <div class="flex flex-wrap md:w-10/12 mt-1 md:mt-5 mx-3 md:mx-auto">
+
+            <div data-aos="fade-up-right" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/2 p-1">
+                <img src="crypto/1.png" />
+            </div>
+            <div data-aos="fade-up-left" data-aos-duration="1000" data-aos-once="false" class="w-full md:w-1/2 p-1">
+                <img src="crypto/2.png" />
+            </div>
+        </div>
+        <hr class="md:w-3/5 md:mx-auto mt-4" />
+    </section>
+    <!-- third software project ends here -->
+
+    <!-- Experence start here -->
+    <section id="experience">
+        <div id="" data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
+            <div class="text-gray-800 w-3/5 mx-auto items-center pt-8 pb-10">
+                <p class="font-bold text-2xl text-center pb-2">EXPERIENCES</p>
+                <hr>
+            </div>
         </div>
 
-    </div>
-    <div class="flex flex-wrap mt-3 md:mt-6 w-full md:w-3/5 text-gray-800 mx-auto">
+        <div class="flex flex-wrap md:mt-6 w-full md:w-3/5 text-gray-800 mx-auto">
 
-        <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
-            class="md:flex-1 mx-3 md:mr-0 text-justify md:text-right">
-            <span class=" md:mr-8 font-bold text-sm md:text-lg">January 2019 to October 2019</span>
-            <span class="mr-8 text-sm"> <i class="fa-solid fa-arrow-right"></i></span>
-            <p class="md:mr-20 mt-2 text-xs md:text-base">Production Executive</p>
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
+                class="md:flex-1 mx-3 md:mr-0 text-justify md:text-right">
+                <span class=" md:mr-8 font-bold text-base md:text-lg">Temporary Demonstrator</span>
+                <span class="mr-8 text-sm"> <i class="fa-solid fa-arrow-right"></i></span>
+                <p class="md:mr-20 mt-2 text-sm md:text-base">September 2020 to March 2023</p>
+            </div>
+            <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="false" class="flex-1 mx-3 md:mr-0">
+                <span class="font-bold text-sm md:text-base">South Eastern University
+                    of Sri Lanka</span>
+                <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-sm md:text-base">
+                    <li>Led tutorials and hands-on sessions for network and
+                        software topics, simplifying complex ideas for student
+                        understanding.</li>
+                    <li>Encouraged practical application of theory, cultivating
+                        active engagement and a positive learning atmosphere.</li>
+                </ul>
+            </div>
+
         </div>
-        <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="false" class="flex-1 mx-3 md:mr-0">
-            <span class="font-bold text-xs md:text-base">Intelligent Image Management Lanka
-                (Pvt) Ltd</span>
-            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-xs md:text-base">
-                <li>Performed legal customer data collection, conducting
-                    thorough analysis, and creating actionable reports.</li>
-                <li>Maintained ethical standards to ensure accurate data
-                    integrity in the process.</li>
-            </ul>
+        <div class="flex flex-wrap mt-3 md:mt-6 w-full md:w-3/5 text-gray-800 mx-auto">
+
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
+                class="md:flex-1 mx-3 md:mr-0 text-justify md:text-right">
+                <span class=" md:mr-8 font-bold text-base md:text-lg">Production Executive</span>
+                <span class="mr-8 text-sm"> <i class="fa-solid fa-arrow-right"></i></span>
+                <p class="md:mr-20 mt-2 text-sm md:text-base">January 2019 to October 2019</p>
+            </div>
+            <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="false" class="flex-1 mx-3 md:mr-0">
+                <span class="font-bold text-sm md:text-base">Intelligent Image Management Lanka
+                    (Pvt) Ltd</span>
+                <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-sm md:text-base">
+                    <li>Performed legal customer data collection, conducting
+                        thorough analysis, and creating actionable reports.</li>
+                    <li>Maintained ethical standards to ensure accurate data
+                        integrity in the process.</li>
+                </ul>
+            </div>
+
         </div>
 
-    </div>
+        <div class="flex flex-wrap mt-3 md:mt-6 w-full md:w-3/5 text-gray-800 mx-auto">
 
-    <div class="flex flex-wrap mt-3 md:mt-6 w-full md:w-3/5 text-gray-800 mx-auto">
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
+                class="md:flex-1 mx-3 md:mr-0 text-justify md:text-right">
+                <span class=" md:mr-8 font-bold text-base md:text-lg">Trainee Software Developer</span>
+                <span class="mr-8 text-sm"> <i class="fa-solid fa-arrow-right"></i></span>
+                <p class="md:mr-20 mt-2 text-sm md:text-base">May 2018 to November 2018</p>
+            </div>
+            <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="false" class="flex-1 mx-3 md:mr-0">
+                <span class="font-bold text-sm md:text-base">Software Engineering Academy (Pvt) Ltd</span>
+                <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-sm md:text-base">
+                    <li>Engaged in software development, collaborating with senior developers to analyze requirements
+                        and
+                        code software.</li>
+                    <li>Played a key role in coding, debugging, testing, and cross-functional collaboration to enhance
+                        software quality and problem-solving..</li>
+                </ul>
+            </div>
 
-        <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
-            class="md:flex-1 mx-3 md:mr-0 text-justify md:text-right">
-            <span class=" md:mr-8 font-bold text-sm md:text-lg">May 2018 to November 2018</span>
-            <span class="mr-8 text-sm"> <i class="fa-solid fa-arrow-right"></i></span>
-            <p class="md:mr-20 mt-2 text-xs md:text-base">Trainee Software Developer</p>
         </div>
-        <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="false" class="flex-1 mx-3 md:mr-0">
-            <span class="font-bold text-xs md:text-base">Software Engineering Academy (Pvt) Ltd</span>
-            <ul data-aos="fade-up" data-aos-duration="1000" data-aos-once="false" class="ml-6 text-xs md:text-base">
-                <li>Engaged in software development, collaborating with senior developers to analyze requirements and
-                    code software.</li>
-                <li>Played a key role in coding, debugging, testing, and cross-functional collaboration to enhance
-                    software quality and problem-solving..</li>
-            </ul>
-        </div>
+    </section>
 
-    </div>
-
+    <!-- Education start here -->
 
     <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="false"
         class="w-full m-1 md:m-0 md:w-10/12 mx-auto items-center flex flex-wrap">
@@ -511,6 +559,7 @@
             </ul>
         </div>
     </div>
+
 
 
 
