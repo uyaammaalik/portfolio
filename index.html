@@ -33,16 +33,31 @@
         html {
             scroll-behavior: smooth;
         }
+
+        #hideAll {
+            position: fixed;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+            background-color: white;
+            z-index: 99;
+            /* Higher than anything else in the document */
+
+        }
     </style>
-
-    <script>
-
-    </script>
 
 </head>
 
 <body class="bg-white text-white work-sans leading-normal text-base tracking-normal">
-
+    <div style="display: none" id="hideAll">&nbsp;</div>
+    <script type="text/javascript">
+        document.getElementById("hideAll").style.display = "block";
+        $(window).ready(function () {
+            //document.getElementById("hideAll").style.display = "none"; 
+            $('#hideAll').hide()
+        });
+    </script>
     <!--Nav-->
     <nav id="header" class="w-full md:w-10/12 mx-auto">
         <div class="w-full container mx-auto flex flex-wrap items-center justify-between px-3 md:py-3">
@@ -70,7 +85,7 @@
                     onclick="dropdownVisibility()" href="#">
                     PROJECTS
                     <div id="drop" onmouseleave="dropdownVisibility()"
-                        class="relative md:absolute ml-4 md:ml-0 w-full md:w-auto text-gray-800 border border-gray-300 bg-white mt-2 p-2 rounded hidden flex flex-col">
+                        class="relative md:absolute ml-4 md:ml-0 md:w-auto text-gray-800 border border-gray-300 bg-white mt-2 p-2 rounded hidden flex flex-col">
                         <a class="py-1" href="#network">Network Projects</a>
                         <hr class="py-1" />
                         <a class="py-1" href="#software">Software Projects</a>
