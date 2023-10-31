@@ -42,22 +42,35 @@
             bottom: 0px;
             background-color: white;
             z-index: 99;
+            text-align: center;
+            font-size: xx-large;
             /* Higher than anything else in the document */
 
         }
     </style>
+    <script>
+        document.onreadystatechange = function () {
+            if (document.readyState !== "complete") {
+                document.querySelector("body").style.visibility = "hidden";
+                document.querySelector("#hideAll").style.visibility = "visible";
+            } else {
+                document.querySelector("#hideAll").style.display = "none";
+                document.querySelector("body").style.visibility = "visible";
+            }
+        };
+    </script>
 
 </head>
 
 <body class="bg-white text-white work-sans leading-normal text-base tracking-normal">
-    <div style="display: none" id="hideAll">&nbsp;</div>
-    <script type="text/javascript">
+    <div style="display: none" id="hideAll">Loading...</div>
+    <!-- <script type="text/javascript">
         document.getElementById("hideAll").style.display = "block";
         $(window).ready(function () {
             //document.getElementById("hideAll").style.display = "none"; 
             $('#hideAll').hide()
         });
-    </script>
+    </script> -->
     <!--Nav-->
     <nav id="header" class="w-full md:w-10/12 mx-auto">
         <div class="w-full container mx-auto flex flex-wrap items-center justify-between px-3 md:py-3">
