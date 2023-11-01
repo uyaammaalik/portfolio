@@ -68,6 +68,43 @@
                 document.querySelector("body").style.visibility = "visible";
             }
         };
+
+        window.addEventListener('scroll', function () {
+            skillLoad("oop", "oop-value")
+            skillLoad("html", "html-value")
+            skillLoad("css", "css-value")
+            skillLoad("javascript", "javascript-value")
+            skillLoad("php", "php-value")
+            skillLoad("laravel", "laravel-value")
+            skillLoad("mysql", "mysql-value")
+            skillLoad("firebase", "firebase-value")
+            skillLoad("python", "python-value")
+            skillLoad("docker", "docker-value")
+            skillLoad("linux", "linux-value")
+            skillLoad("java", "java-value")
+            skillLoad("ccna", "ccna-value")
+            skillLoad("vapt", "vapt-value")
+            skillLoad("df", "df-value")
+            skillLoad("ws", "ws-value")
+
+        });
+
+
+        function skillLoad(elementID, idValue) {
+            // Get the skills section element.
+            let tagID = "#" + elementID
+            const skillsSection = document.querySelector(tagID);
+            let value = document.getElementById(idValue).textContent;
+
+            // Check if the skills section is in view.
+            if (skillsSection.getBoundingClientRect().top < window.innerHeight) {
+                // Add the `active` class to all progress bars.
+                const progressBars = document.querySelectorAll(tagID);
+                //progressBars.forEach(progressBar => progressBar.classList.add('active'));
+                progressBars.forEach(progressBar => progressBar.style.width = value)
+            }
+        }
+
     </script>
 
 </head>
@@ -118,12 +155,9 @@
                     href="#edu-pro">
                     EDUCATION
                 </a>
+
                 <a class="pt-2 text-sm md:text-base md:pt-0 md:pl-3 inline-block no-underline text-gray-800 hover:text-gray-500"
-                    href="#edu-pro">
-                    PRO.QUALIFICATIONS
-                </a>
-                <a class="pt-2 text-sm md:text-base md:pt-0 md:pl-3 inline-block no-underline text-gray-800 hover:text-gray-500"
-                    href="#">
+                    href="#skill">
                     SKILLS
                 </a>
 
@@ -703,6 +737,159 @@
         </div>
     </section>
 
+    <section id="skill">
+        <div id="" data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
+            <div class="text-gray-800 w-3/5 mx-auto items-center pt-8 pb-10">
+                <p class="font-bold text-xl md:text-2xl text-center md:pb-2">SKILLS</p>
+                <hr>
+            </div>
+        </div>
+        <!-- Original SOURCE : http://w3lessons.info/2013/06/04/skill-bar-with-jquery-css3/ ---- note: modification with animate percentage counter -->
+        <div id="skillload" class="flex flex-wrap mt-2 md:mt-6 w-full md:w-11/12 text-gray-800 mx-auto">
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
+                class="flex flex-wrap flex-col mx-3 md:mx-0 md:mr-2 md:flex-row md:flex-1 w-full md:w-1/2">
+                <div class="w-full overflow-x-hidden">
+                    <p>Object Oriented Programming</p>
+                    <span class="w-full h-2 bg-gray-200 rounded-md inline-flex mt-2">
+                        <span id="oop" style="transition: width 1s ease-in-out; width: 0;"
+                            class="h-full bg-gradient-to-r from-blue-500 to-blue-900 rounded-md relative">
+                            <span id="oop-value" class="absolute -top-7 right-0">90%</span></span>
+                    </span>
+                </div>
+                <div class="w-full overflow-x-hidden">
+                    <p>HTML</p>
+                    <span class="w-full h-2 bg-gray-200 rounded-md inline-flex mt-2">
+                        <span id="html" style="transition: width 1s ease-in-out; width: 0;"
+                            class="h-full bg-gradient-to-r from-blue-500 to-blue-900 rounded-md relative">
+                            <span id="html-value" class="absolute -top-7 right-0">90%</span></span>
+                    </span>
+                </div>
+                <div class="w-full overflow-x-hidden">
+                    <p>CSS</p>
+                    <span class="w-full h-2 bg-gray-200 rounded-md inline-flex mt-2">
+                        <span id="css" style="transition: width 1s ease-in-out; width: 0;"
+                            class="h-full bg-gradient-to-r from-blue-500 to-blue-900 rounded-md relative">
+                            <span id="css-value" class="absolute -top-7 right-0">80%</span></span>
+                    </span>
+                </div>
+                <div class="w-full overflow-x-hidden">
+                    <p>JavaScript</p>
+                    <span class="w-full h-2 bg-gray-200 rounded-md inline-flex mt-2">
+                        <span id="javascript" style="transition: width 1s ease-in-out; width: 0;"
+                            class="h-full bg-gradient-to-r from-blue-500 to-blue-900 rounded-md relative">
+                            <span id="javascript-value" class="absolute -top-7 right-0">75%</span></span>
+                    </span>
+                </div>
+                <div class="w-full overflow-x-hidden">
+                    <p>PHP</p>
+                    <span class="w-full h-2 bg-gray-200 rounded-md inline-flex mt-2">
+                        <span id="php" style="transition: width 1s ease-in-out; width: 0;"
+                            class="h-full bg-gradient-to-r from-blue-500 to-blue-900 rounded-md relative">
+                            <span id="php-value" class="absolute -top-7 right-0">80%</span></span>
+                    </span>
+                </div>
+                <div class="w-full overflow-x-hidden">
+                    <p>Laravel</p>
+                    <span class="w-full h-2 bg-gray-200 rounded-md inline-flex mt-2">
+                        <span id="laravel" style="transition: width 1s ease-in-out; width: 0;"
+                            class="h-full bg-gradient-to-r from-blue-500 to-blue-900 rounded-md relative">
+                            <span id="laravel-value" class="absolute -top-7 right-0">75%</span></span>
+                    </span>
+                </div>
+                <div class="w-full overflow-x-hidden">
+                    <p>MySQL</p>
+                    <span class="w-full h-2 bg-gray-200 rounded-md inline-flex mt-2">
+                        <span id="mysql" style="transition: width 1s ease-in-out; width: 0;"
+                            class="h-full bg-gradient-to-r from-blue-500 to-blue-900 rounded-md relative">
+                            <span id="mysql-value" class="absolute -top-7 right-0">75%</span></span>
+                    </span>
+                </div>
+                <div class="w-full overflow-x-hidden">
+                    <p>Firebase</p>
+                    <span class="w-full h-2 bg-gray-200 rounded-md inline-flex mt-2">
+                        <span id="firebase" style="transition: width 1s ease-in-out; width: 0;"
+                            class="h-full bg-gradient-to-r from-blue-500 to-blue-900 rounded-md relative">
+                            <span id="firebase-value" class="absolute -top-7 right-0">70%</span></span>
+                    </span>
+                </div>
+            </div>
+            <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="false"
+                class="flex flex-wrap flex-co mx-3 md:mx-0 md:ml-2 md:flex-row md:flex-1 w-full md:w-1/2">
+                <div class="w-full overflow-x-hidden">
+                    <p>Docker</p>
+                    <span class="w-full h-2 bg-gray-200 rounded-md inline-flex mt-2">
+                        <span id="docker" style="transition: width 1s ease-in-out; width: 0;"
+                            class="h-full bg-gradient-to-r from-blue-500 to-blue-900 rounded-md relative">
+                            <span id="docker-value" class="absolute -top-7 right-0">60%</span></span>
+                    </span>
+                </div>
+                <div class="w-full overflow-x-hidden">
+                    <p>Network Switching and Routing</p>
+                    <span class="w-full h-2 bg-gray-200 rounded-md inline-flex mt-2">
+                        <span id="ccna" style="transition: width 1s ease-in-out; width: 0;"
+                            class="h-full bg-gradient-to-r from-blue-500 to-blue-900 rounded-md relative">
+                            <span id="ccna-value" class="absolute -top-7 right-0">90%</span></span>
+                    </span>
+                </div>
+                <div class="w-full overflow-x-hidden">
+                    <p>Linux Server Administration</p>
+                    <span class="w-full h-2 bg-gray-200 rounded-md inline-flex mt-2">
+                        <span id="linux" style="transition: width 1s ease-in-out; width: 0;"
+                            class="h-full bg-gradient-to-r from-blue-500 to-blue-900 rounded-md relative">
+                            <span id="linux-value" class="absolute -top-7 right-0">85%</span></span>
+                    </span>
+                </div>
+                <div class="w-full overflow-x-hidden">
+                    <p>Python Scripting</p>
+                    <span class="w-full h-2 bg-gray-200 rounded-md inline-flex mt-2">
+                        <span id="python" style="transition: width 1s ease-in-out; width: 0;"
+                            class="h-full bg-gradient-to-r from-blue-500 to-blue-900 rounded-md relative">
+                            <span id="python-value" class="absolute -top-7 right-0">60%</span></span>
+                    </span>
+                </div>
+                <div class="w-full overflow-x-hidden">
+                    <p>Vulnerability Assessment and Penetration Testing</p>
+                    <span class="w-full h-2 bg-gray-200 rounded-md inline-flex mt-2">
+                        <span id="vapt" style="transition: width 1s ease-in-out; width: 0;"
+                            class="h-full bg-gradient-to-r from-blue-500 to-blue-900 rounded-md relative">
+                            <span id="vapt-value" class="absolute -top-7 right-0">65%</span></span>
+                    </span>
+                </div>
+                <div class="w-full overflow-x-hidden">
+                    <p>Digital Forensics</p>
+                    <span class="w-full h-2 bg-gray-200 rounded-md inline-flex mt-2">
+                        <span id="df" style="transition: width 1s ease-in-out; width: 0;"
+                            class="h-full bg-gradient-to-r from-blue-500 to-blue-900 rounded-md relative">
+                            <span id="df-value" class="absolute -top-7 right-0">60%</span></span>
+                    </span>
+                </div>
+                <div class="w-full overflow-x-hidden">
+                    <p>Windows Server Administration</p>
+                    <span class="w-full h-2 bg-gray-200 rounded-md inline-flex mt-2">
+                        <span id="ws" style="transition: width 1s ease-in-out; width: 0;"
+                            class="h-full bg-gradient-to-r from-blue-500 to-blue-900 rounded-md relative">
+                            <span id="ws-value" class="absolute -top-7 right-0">70%</span></span>
+                    </span>
+                </div>
+                <div class="w-full overflow-x-hidden">
+                    <p>JAVA</p>
+                    <span class="w-full h-2 bg-gray-200 rounded-md inline-flex mt-2">
+                        <span id="java" style="transition: width 1s ease-in-out; width: 0;"
+                            class="h-full bg-gradient-to-r from-blue-500 to-blue-900 rounded-md relative">
+                            <span id="java-value" class="absolute -top-7 right-0">50%</span></span>
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <br>
+    <br>
+    <br>
+
+
     <div id="" data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
         <div class="text-gray-800 w-3/5 mx-auto items-center pt-8 pb-10">
             <p class="font-bold text-red-800 text-xl md:text-2xl text-center pb-2">- - - # # - - Development in Progress
@@ -711,70 +898,6 @@
             <hr>
         </div>
     </div>
-
-    <!-- <section id="skill">
-        <div id="" data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
-            <div class="text-gray-800 w-3/5 mx-auto items-center pt-8 pb-10">
-                <p class="font-bold text-xl md:text-2xl text-center pb-2">SKILLS</p>
-                <hr>
-            </div>
-        </div>
-        <!-- Original SOURCE : http://w3lessons.info/2013/06/04/skill-bar-with-jquery-css3/ ---- note: modification with animate percentage counter
-        <div class="flex flex-wrap mt-3 md:mt-6 w-full md:w-11/12 text-gray-800 mx-auto">
-            <div class="flex flex-wrap flex-col flex-auto mr-2 md:flex-row md:flex-1 md:w-1/2">
-                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
-                    class="skill-body skillbar clearfix md:flex-1 mx-3 md:mx-3 md:mr-2" data-percent="95%">
-                    <div class="skillbar-title" style="background: #d35400;"><span>HTML5</span></div>
-                    <div class="skillbar-bar" style="background: #e67e22;"></div>
-                    <div class="skill-bar-percent Count">95</div>
-                </div>
-                <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
-                    class="skill-body skillbar clearfix md:flex-1 mx-3 md:mx-0 md:ml-2" data-percent="95%">
-                    <div class="skillbar-title" style="background: #d35400;"><span>HTML5</span></div>
-                    <div class="skillbar-bar" style="background: #e67e22;"></div>
-                    <div class="skill-bar-percent Count">95</div>
-                </div>
-            </div>
-            <div class="flex flex-wrap flex-col flex-auto ml-2 md:flex-row md:flex-1 md:w-1/2">
-                <div class="skill-body skillbar clearfix md:flex-1 mx-3 md:mx-0 md:mr-2" data-percent="95%">
-                    <div class="skillbar-title" style="background: #d35400;"><span>CSS</span></div>
-                    <div class="skillbar-bar" style="background: #e67e22;"></div>
-                    <div class="skill-bar-percent Count">95</div>
-                </div>
-                <div class="skill-body skillbar clearfix md:flex-1 mx-3 md:mx-3 md:ml-2" data-percent="95%">
-                    <div class="skillbar-title" style="background: #d35400;"><span>CSS</span></div>
-                    <div class="skillbar-bar" style="background: #e67e22;"></div>
-                    <div class="skill-bar-percent Count">95</div>
-                </div>
-            </div>
-
-
-
-        </div>
-
-
-
-        <div id="skiill" class="flex flex-wrap mt-3 md:mt-6 w-full md:w-11/12 text-gray-800 mx-auto">
-            <div class="bg-gray-300 relative w-full">
-                <p class="">HTML</p>
-                <div id="percentage" class="ml-16 absolute inset-0 bg-gray-600">
-                    95%
-                </div>
-            </div>
-        </div>
-
-    </section> 
-    <br>
-    <br>
-    <br>
-    <div class="w-full  bg-gray-200 flex justify-center items-center">
-        <div class="bg-gray-400 w-96  relative z-0">
-            <p class="italic text-bold bd-red-100 font-serif">Map</p>
-            <div class="absolute inset-0 flex justify-center items-center z-10">
-                <p class="text-2xl font-bold">This should be on top of the map</p>
-            </div>
-        </div>
-    </div> -->
 
     <br>
     <br>
@@ -834,5 +957,9 @@
             dropdown.classList.add('hidden');
         }
     }
+
+    // $(window).scroll(function () {
+    //     $('#skilload')
+    // })
 
 </script>
