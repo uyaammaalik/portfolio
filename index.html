@@ -11,53 +11,15 @@
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css-javascript/aos/dist/aos.css" />
-    <link rel="stylesheet" href="css-javascript/css/skill.css" />
+    <link rel="stylesheet" href="css-javascript/css/style.css" />
 
     <script src="https://kit.fontawesome.com/ca980d62d8.js" crossorigin="anonymous">
     </script>
 
     <script src="css-javascript/js/jquery.js">
     </script>
-    <script src="css-javascript/js/skill.js">
+    <!-- <script src="css-javascript/js/javascript.js"> -->
     </script>
-
-    <style>
-        body {
-            font-family: "Dosis", sans-serif;
-        }
-
-        li {
-            margin-top: 5px;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        #loader {
-            border: 12px solid #f3f3f3;
-            border-radius: 50%;
-            border-top: 12px solid #444444;
-            width: 70px;
-            height: 70px;
-            animation: spin 1s linear infinite;
-        }
-
-        .center {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-        }
-
-        @keyframes spin {
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
     <script>
         document.onreadystatechange = function () {
             if (document.readyState !== "complete") {
@@ -849,7 +811,7 @@
                 </div>
                 <div class="w-full overflow-x-hidden">
                     <p>Vulnerability Assessment and Penetration Testing</p>
-                    <span class="w-full h-2 bg-gray-200 rounded-md inline-flex mt-2">
+                    <span class="w-full h-2 bg-gray-200 rounded-md inline-flex mt-5 md:mt-2">
                         <span id="vapt" style="transition: width 1s ease-in-out; width: 0;"
                             class="h-full bg-gradient-to-r from-blue-500 to-blue-900 rounded-md relative">
                             <span id="vapt-value" class="absolute -top-7 right-0">65%</span></span>
@@ -865,7 +827,7 @@
                 </div>
                 <div class="w-full overflow-x-hidden">
                     <p>Windows Server Administration</p>
-                    <span class="w-full h-2 bg-gray-200 rounded-md inline-flex mt-2">
+                    <span class="w-full h-2 bg-gray-200 rounded-md inline-flex mt-6 md:mt-2">
                         <span id="ws" style="transition: width 1s ease-in-out; width: 0;"
                             class="h-full bg-gradient-to-r from-blue-500 to-blue-900 rounded-md relative">
                             <span id="ws-value" class="absolute -top-7 right-0">70%</span></span>
@@ -889,25 +851,35 @@
     <br>
     <br>
 
-
-    <div id="" data-aos="fade-up" data-aos-duration="1000" data-aos-once="false">
-        <div class="text-gray-800 w-3/5 mx-auto items-center pt-8 pb-10">
-            <p class="font-bold text-red-800 text-xl md:text-2xl text-center pb-2">- - - # # - - Development in Progress
-                - - # # - - -
-            </p>
-            <hr>
+    <footer class=" bottom-0 h-full w-full bg-gray-800 p-20">
+        <div class="flex flex-wrap w-3/4 md:w-1/4 mx-auto justify-between ">
+            <a class="cursor-pointer flex-row bg-white rounded-full flex items-center justify-center w-8 h-8 md:w-10 md:h-10"
+                target="_blank" href="https://www.linkedin.com/in/uyaammaalik/"><span
+                    class="text-lg md:text-2xl text-gray-800"><i class="fa-brands fa-linkedin-in"></i></span></a>
+            <a class="cursor-pointer flex-row bg-white rounded-full flex items-center justify-center w-8 h-8 md:w-10 md:h-10"
+                target="_blank" href="https://www.facebook.com/uyaammaalik"><span
+                    class="text-lg md:text-2xl text-gray-800"><i class="fa-brands fa-facebook-f"></i></span></a>
+            <a class="cursor-pointer flex-row bg-white rounded-full flex items-center justify-center w-8 h-8 md:w-10 md:h-10"
+                target="_blank" href="https://twitter.com/Uyaammaalik"><span
+                    class="text-lg md:text-2xl text-gray-800"><i class="fa-brands fa-x-twitter"></i></span></a>
+            <a class="cursor-pointer flex-row bg-white rounded-full flex items-center justify-center w-8 h-8 md:w-10 md:h-10"
+                target="_blank" href="https://github.com/uyaammaalik"><span class="text-lg md:text-2xl text-gray-800"><i
+                        class="fa-brands fa-github"></i></span></a>
         </div>
-    </div>
+        <div class="text-center mt-5 md:mt-8 ">
+            <div class="md:text-2xl font-bold">UYAAM MAALIK</div>
+            <div class="w-8/12 md:w-4/12 mx-auto flex flex-col md:flex-row justify-between mt-5 md:mt-8">
+                <a class=" hover:text-gray-500" href="#header"> HOME </a>
+                <a class="mt-1 md:mt-0 hover:text-gray-500" href="#projects"> PROJECTS </a>
+                <a class="mt-1 md:mt-0 hover:text-gray-500" href="#experience"> EXPERIENCES </a>
+                <a class="mt-1 md:mt-0 hover:text-gray-500" href="#edu-pro"> EDUCATION </a>
+                <a class="mt-1 md:mt-0 hover:text-gray-500" href="#skill"> SKILLS </a>
+            </div>
+        </div>
+    </footer>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
+
 
 
     <script src="css-javascript/aos/dist/aos.js"></script>
