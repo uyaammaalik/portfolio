@@ -49,8 +49,19 @@
             skillLoad("df", "df-value")
             skillLoad("ws", "ws-value")
 
+
         });
 
+        $(document).ready(function () {
+            $("#floatingButton").hide()
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 800) {
+                    $("#floatingButton").show()
+                } else {
+                    $("#floatingButton").hide()
+                }
+            });
+        });
 
         function skillLoad(elementID, idValue) {
             // Get the skills section element.
@@ -876,10 +887,14 @@
                 <a class="mt-1 md:mt-0 hover:text-gray-500" href="#skill"> SKILLS </a>
             </div>
         </div>
+        <hr class=" mt-4 md:mt-8">
+        <div class="text-center mt-2 md:mt-3">Designed by Uyaam Maalik | All Rights Reserved</div>
     </footer>
 
 
-
+    <a id="floatingButton" href="#header" class="animate-bounce float flex items-center justify-center">
+        <i class="fa fa-arrow-up "></i>
+    </a>
 
 
     <script src="css-javascript/aos/dist/aos.js"></script>

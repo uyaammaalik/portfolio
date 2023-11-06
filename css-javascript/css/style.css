@@ -33,3 +33,16 @@ html {
         transform: rotate(360deg);
     }
 }
+
+.float {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: 40px;
+    right: 40px;
+    background-color: rgb(107 114 128);
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+}
