@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Uyaam Maalik</title>
     <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
@@ -18,67 +18,9 @@
 
     <script src="css-javascript/js/jquery.js">
     </script>
-    <!-- <script src="css-javascript/js/javascript.js"> -->
+    <script src="css-javascript/js/javascript.js">
     </script>
-    <script>
-        document.onreadystatechange = function () {
-            if (document.readyState !== "complete") {
-                document.querySelector("body").style.visibility = "hidden";
-                document.querySelector("#loader").style.visibility = "visible";
-            } else {
-                document.querySelector("#loader").style.display = "none";
-                document.querySelector("body").style.visibility = "visible";
-            }
-        };
 
-        window.addEventListener('scroll', function () {
-            skillLoad("oop", "oop-value")
-            skillLoad("html", "html-value")
-            skillLoad("css", "css-value")
-            skillLoad("javascript", "javascript-value")
-            skillLoad("php", "php-value")
-            skillLoad("laravel", "laravel-value")
-            skillLoad("mysql", "mysql-value")
-            skillLoad("firebase", "firebase-value")
-            skillLoad("python", "python-value")
-            skillLoad("docker", "docker-value")
-            skillLoad("linux", "linux-value")
-            skillLoad("java", "java-value")
-            skillLoad("ccna", "ccna-value")
-            skillLoad("vapt", "vapt-value")
-            skillLoad("df", "df-value")
-            skillLoad("ws", "ws-value")
-
-
-        });
-
-        $(document).ready(function () {
-            $("#floatingButton").hide()
-            $(window).scroll(function () {
-                if ($(window).scrollTop() > 800) {
-                    $("#floatingButton").show()
-                } else {
-                    $("#floatingButton").hide()
-                }
-            });
-        });
-
-        function skillLoad(elementID, idValue) {
-            // Get the skills section element.
-            let tagID = "#" + elementID
-            const skillsSection = document.querySelector(tagID);
-            let value = document.getElementById(idValue).textContent;
-
-            // Check if the skills section is in view.
-            if (skillsSection.getBoundingClientRect().top < window.innerHeight) {
-                // Add the `active` class to all progress bars.
-                const progressBars = document.querySelectorAll(tagID);
-                //progressBars.forEach(progressBar => progressBar.classList.add('active'));
-                progressBars.forEach(progressBar => progressBar.style.width = value)
-            }
-        }
-
-    </script>
 
 </head>
 
@@ -933,20 +875,5 @@
             showContent.classList.add('hidden');
         }
     }
-
-    function dropdownVisibility() {
-        if (dropdown.classList.contains('hidden')) {
-            dropdown.classList.remove('hidden');
-            dropdown.classList.add('visible');
-
-        } else {
-            dropdown.classList.remove('visible');
-            dropdown.classList.add('hidden');
-        }
-    }
-
-    // $(window).scroll(function () {
-    //     $('#skilload')
-    // })
 
 </script>

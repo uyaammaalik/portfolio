@@ -1,39 +1,15 @@
-const showContent = document.getElementById('nav-content')
-const dropdown = document.getElementById('drop')
-// document.getElementById('project').addEventListener('click', function (event) {
-//     dropdownVisibility()
-// })
-document.getElementById('button').addEventListener('click', function (event) {
-    toggleVisibility()
-})
-function toggleVisibility() {
-
-    if (showContent.classList.contains('hidden')) {
-        showContent.classList.remove('hidden');
-        showContent.classList.add('visible');
-        showContent.setAttribute('data-aos', 'fade-down');
-        showContent.setAttribute('data-aos-once', 'false');
-
-        AOS.init({
-            initClassName: "aos-init",
-            startEvent: "click",
+$(document).ready(function () {
+    setTimeout(function () {
+        $("#floatingButton").hide();
+        $(document).on('scroll', function () {
+            if ($(document).scrollTop() > 800) {
+                $("#floatingButton").show();
+            } else {
+                $("#floatingButton").hide();
+            }
         });
-    } else {
-        showContent.classList.remove('visible');
-        showContent.classList.add('hidden');
-    }
-}
-
-function dropdownVisibility() {
-    if (dropdown.classList.contains('hidden')) {
-        dropdown.classList.remove('hidden');
-        dropdown.classList.add('visible');
-
-    } else {
-        dropdown.classList.remove('visible');
-        dropdown.classList.add('hidden');
-    }
-}
+    }, 100); // Adjust the delay as needed
+});
 
 document.onreadystatechange = function () {
     if (document.readyState !== "complete") {
@@ -45,12 +21,27 @@ document.onreadystatechange = function () {
     }
 };
 
+
 window.addEventListener('scroll', function () {
+    skillLoad("oop", "oop-value")
     skillLoad("html", "html-value")
     skillLoad("css", "css-value")
+    skillLoad("javascript", "javascript-value")
+    skillLoad("php", "php-value")
+    skillLoad("laravel", "laravel-value")
+    skillLoad("mysql", "mysql-value")
+    skillLoad("firebase", "firebase-value")
+    skillLoad("python", "python-value")
+    skillLoad("docker", "docker-value")
+    skillLoad("linux", "linux-value")
+    skillLoad("java", "java-value")
+    skillLoad("ccna", "ccna-value")
+    skillLoad("vapt", "vapt-value")
+    skillLoad("df", "df-value")
+    skillLoad("ws", "ws-value")
+
 
 });
-
 
 function skillLoad(elementID, idValue) {
     // Get the skills section element.
@@ -66,3 +57,14 @@ function skillLoad(elementID, idValue) {
         progressBars.forEach(progressBar => progressBar.style.width = value)
     }
 }
+
+function dropdownVisibility() {
+    if (dropdown.classList.contains('hidden')) {
+        dropdown.classList.remove('hidden');
+        dropdown.classList.add('visible');
+
+    } else {
+        dropdown.classList.remove('visible');
+        dropdown.classList.add('hidden');
+    }
+}   
