@@ -917,6 +917,7 @@
 
     const showContent = document.getElementById('nav-content')
     const dropdown = document.getElementById('drop')
+    const projectBtn = document.getElementById('project');
     // document.getElementById('project').addEventListener('click', function (event) {
     //     dropdownVisibility()
     // })
@@ -940,5 +941,11 @@
             showContent.classList.add('hidden');
         }
     }
+
+    window.addEventListener('click', (e) => {
+        if (!projectBtn.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.add('hidden');
+        }
+    });
 
 </script>
