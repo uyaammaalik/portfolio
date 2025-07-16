@@ -57,14 +57,17 @@ function skillLoad(elementID, idValue) {
         progressBars.forEach(progressBar => progressBar.style.width = value)
     }
 }
-
-function dropdownVisibility() {
-    if (dropdown.classList.contains('hidden')) {
-        dropdown.classList.remove('hidden');
-        dropdown.classList.add('visible');
-
-    } else {
-        dropdown.classList.remove('visible');
-        dropdown.classList.add('hidden');
+ function dropdownVisibility() {
+        dropdown.classList.toggle('hidden');
     }
-}   
+
+// function dropdownVisibility() {
+//     if (dropdown.classList.contains('hidden')) {
+//         dropdown.classList.remove('hidden');
+//         dropdown.classList.add('visible');
+
+//     } else {
+//         dropdown.classList.remove('visible');
+//         dropdown.classList.add('hidden');
+//     }
+// }   

@@ -26,7 +26,7 @@
     <!-- Page loader reference from GeeksforGeeks -->
     <div id="loader" class="center"></div>
     <!--Nav-->
-    <nav id="header" class="w-full md:w-10/12 mx-auto h-24 md:h-full">
+    <!-- <nav id="header" class="w-full md:w-10/12 mx-auto">
         <div class="w-full container mx-auto flex flex-wrap items-center justify-between px-3 md:py-3">
 
 
@@ -37,22 +37,56 @@
                             href="index.html">
                             UYAAM MAALIK</li>
                     </ul>
-
-                    <!-- Burger Button for Mobile -->
-                    <div class="md:hidden order-2 pt-6 ml-6">
-                        <button id="button" class="text-gray-800 focus:outline-none">
-                            <i class="fa fa-bars fa-lg"></i>
-                        </button>
-                    </div>
-                    <!-- <span class=" flex-none md:hidden order-2 pt-6 ml-6" id="button" type="button">
+                    <!- <span class=" flex-none md:hidden order-2 pt-6 ml-6" id="button" type="button">
                         <img src="menu.png" class="w-6" />
-                    </span> -->
+                    </span> 
+                     <!- Burger Button for Mobile --
+        <div class="md:hidden">
+            <button id="button" class="text-gray-800 focus:outline-none">
+                <i class="fa fa-bars fa-lg"></i>
+            </button>
+        </div>
                 </nav>
 
             </div>
 
+            <div class="hidden md:flex mt-3 md:mt-0 md:flex-row md:items-center order-2 flex-col md:flex"
+                id="nav-content">
+                <a href="#experience"
+                    class="pt-2 text-sm md:text-base md:pt-0 md:pl-3 inline-block no-underline text-gray-800 hover:text-gray-500">
+                    EXPERIENCES
+                </a>
+                <a href="#edu-pro"
+                    class="pt-2 text-sm md:text-base md:pt-0 md:pl-3 inline-block no-underline text-gray-800 hover:text-gray-500">
+                    EDUCATION
+                </a>
+                <a href="#skill"
+                    class="pt-2 text-sm md:text-base md:pt-0 md:pl-3 inline-block no-underline text-gray-800 hover:text-gray-500">
+                    SKILLS
+                </a>
 
-            <div class="hidden absolute md:static space-x-6 md:block mt-20 md:mt-0 md:pt-4 flex flex-row items-center order-2"
+                <!- Projects Dropdown --
+                <div class="relative group md:pl-3 pt-2 md:pt-0">
+                    <button id="project" onclick="dropdownVisibility()"
+                        class="text-sm md:text-base text-gray-800 hover:text-gray-500 focus:outline-none flex items-center">
+                        PROJECTS
+                        <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M5.25 7.75L10 12.5L14.75 7.75" />
+                        </svg>
+                    </button>
+
+                    <div id="drop"
+                        class="absolute z-50 left-0 mt-2 w-44 bg-white rounded-md shadow-lg border border-gray-200 hidden transition-all duration-300">
+                        <a href="#network" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Network
+                            Projects</a>
+                        <hr />
+                        <a href="#software" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Software
+                            Projects</a>
+                    </div>
+                </div>
+            </div>
+
+            <!- <div class="hidden md:block mt-3 md:mt-0  md:flex-row md:items-center order-2 flex flex-col"
                 id="nav-content">
 
                 <a class="pt-2 text-sm md:text-base md:pt-0 md:pl-3 inline-block no-underline text-gray-800 hover:text-gray-500"
@@ -69,22 +103,76 @@
                     SKILLS
                 </a>
 
-                <button id="project"
+                <a id="project"
                     class="pt-2 inline-block md:pt-0 md:pl-3 text-sm md:text-base no-underline text-gray-800 hover:text-gray-500"
                     onclick="dropdownVisibility()" href="#">
                     PROJECTS
                     <div id="drop" onmouseleave="dropdownVisibility()"
-                        class="hidden flex flex-col absolute right-0 md:right-auto w-36 md:ml-0 md:w-auto text-gray-800 border border-gray-300 bg-white mt-2 p-2 rounded">
+                        class="relative md:absolute ml-4 md:ml-0 md:w-auto text-gray-800 border border-gray-300 bg-white mt-2 p-2 rounded hidden flex flex-col">
                         <a class="py-1" href="#network">Network Projects</a>
                         <hr class="py-1" />
                         <a class="py-1" href="#software">Software Projects</a>
                     </div>
-                </button>
+                </a>
 
 
+            </div> --
+        </div>
+    </nav> -->
+
+<!-- Header -->
+<nav class="bg-white border-b border-gray-200 top-0 w-full md:w-10/12 mx-auto">
+    <div class="flex justify-between items-center px-4 py-3 md:px-8">
+        <!-- Logo -->
+        <div class="text-xl font-bold text-gray-800">
+            My Portfolio
+        </div>
+
+        <!-- Burger Button for Mobile -->
+        <div class="md:hidden">
+            <button id="button" class="text-gray-800 focus:outline-none">
+                <i class="fa fa-bars fa-lg"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <div id="nav-content"
+        class="hidden flex-col md:flex md:flex-row md:justify-center md:space-x-6 bg-white md:bg-transparent md:static absolute top-14 left-0 w-full md:w-auto px-4 md:px-0 py-4 md:py-0 shadow md:shadow-none">
+        
+        <a href="#experience"
+            class="py-2 md:py-0 text-sm md:text-base text-gray-800 hover:text-gray-500">EXPERIENCES</a>
+
+        <a href="#edu-pro"
+            class="py-2 md:py-0 text-sm md:text-base text-gray-800 hover:text-gray-500">EDUCATION</a>
+
+        <a href="#skill"
+            class="py-2 md:py-0 text-sm md:text-base text-gray-800 hover:text-gray-500">SKILLS</a>
+
+        <!-- Projects Dropdown -->
+        <div class="relative">
+            <button id="project"
+                class="py-2 md:py-0 text-sm md:text-base text-gray-800 hover:text-gray-500 flex items-center"
+                onclick="dropdownVisibility()">
+                PROJECTS
+                <svg class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M5.25 7.75L10 12.5L14.75 7.75" />
+                </svg>
+            </button>
+
+            <div id="drop"
+                class="hidden absolute left-0 mt-2 w-48 bg-white border border-gray-300 shadow-md rounded-md z-50">
+                <a href="#network"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Network Projects</a>
+                <hr>
+                <a href="#software"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Software Projects</a>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
+
+
     <div style="background-image: url('back.jpg'); background-size: cover;" class="mt-1">
         <div class="md:w-8/12 bg-white bg-opacity-90 flex flex-wrap md:pt-8 pt-8 mx-auto">
             <div data-aos-duration="1000" data-aos="fade-right" class="w-full md:w-1/2 px-12 md:px-0">
@@ -158,7 +246,8 @@
             <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
                 class="md:flex-1 mx-3 md:mr-0 text-justify md:text-right">
                 <span class=" md:mr-8 font-bold text-base md:text-lg">ICT Officer</span>
-                <span class="hidden md:inline-block md:align-middle md:ml-2 md:text-sm md:leading-none mr-8"> <i class="fa-solid fa-arrow-right"></i></span>
+                <span class="hidden md:inline-block md:align-middle md:ml-2 md:text-sm md:leading-none mr-8"> <i
+                        class="fa-solid fa-arrow-right"></i></span>
                 <p class="md:mr-20 mt-2 text-sm md:text-base">August 2024 to Present</p>
             </div>
             <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="false" class="md:flex-1 mx-3 md:mr-0">
@@ -181,7 +270,8 @@
             <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
                 class="md:flex-1 mx-3 md:mr-0 text-justify md:text-right">
                 <span class=" md:mr-8 font-bold text-base md:text-lg">Instructor</span>
-                <span class="hidden md:inline-block md:align-middle md:ml-2 md:text-sm md:leading-none mr-8"> <i class="fa-solid fa-arrow-right"></i></span>
+                <span class="hidden md:inline-block md:align-middle md:ml-2 md:text-sm md:leading-none mr-8"> <i
+                        class="fa-solid fa-arrow-right"></i></span>
                 <p class="md:mr-20 mt-2 text-sm md:text-base">February 2024 to August 2024</p>
             </div>
             <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="false" class="md:flex-1 mx-3 md:mr-0">
@@ -196,13 +286,14 @@
             </div>
 
         </div>
-        
+
         <div class="flex flex-wrap mt-5 md:mt-6 w-full md:w-3/5 text-gray-800 mx-auto">
 
             <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
                 class="md:flex-1 mx-3 md:mr-0 text-justify md:text-right">
                 <span class=" md:mr-8 font-bold text-base md:text-lg">Temporary Demonstrator</span>
-                <span class="hidden md:inline-block md:align-middle md:ml-2 md:text-sm md:leading-none mr-8"> <i class="fa-solid fa-arrow-right"></i></span>
+                <span class="hidden md:inline-block md:align-middle md:ml-2 md:text-sm md:leading-none mr-8"> <i
+                        class="fa-solid fa-arrow-right"></i></span>
                 <p class="md:mr-20 mt-2 text-sm md:text-base">September 2020 to March 2023</p>
             </div>
             <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="false" class="md:flex-1 mx-3 md:mr-0">
@@ -225,7 +316,8 @@
             <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
                 class="md:flex-1 mx-3 md:mr-0 text-justify md:text-right">
                 <span class=" md:mr-8 font-bold text-base md:text-lg">Production Executive</span>
-                <span class="hidden md:inline-block md:align-middle md:ml-2 md:text-sm md:leading-none mr-8"> <i class="fa-solid fa-arrow-right"></i></span>
+                <span class="hidden md:inline-block md:align-middle md:ml-2 md:text-sm md:leading-none mr-8"> <i
+                        class="fa-solid fa-arrow-right"></i></span>
                 <p class="md:mr-20 mt-2 text-sm md:text-base">January 2019 to October 2019</p>
             </div>
             <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="false" class="md:flex-1 mx-3 md:mr-0">
@@ -247,7 +339,8 @@
             <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
                 class="md:flex-1 mx-3 md:mr-0 text-justify md:text-right">
                 <span class=" md:mr-8 font-bold text-base md:text-lg">Trainee Software Developer</span>
-                <span class="hidden md:inline-block md:align-middle md:ml-2 md:text-sm md:leading-none mr-8"> <i class="fa-solid fa-arrow-right"></i></span>
+                <span class="hidden md:inline-block md:align-middle md:ml-2 md:text-sm md:leading-none mr-8"> <i
+                        class="fa-solid fa-arrow-right"></i></span>
                 <p class="md:mr-20 mt-2 text-sm md:text-base">May 2018 to November 2018</p>
             </div>
             <div data-aos="fade-left" data-aos-duration="1000" data-aos-once="false" class="md:flex-1 mx-3 md:mr-0">
@@ -634,7 +727,8 @@
                 <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
                     class="md:flex-1 mx-3 md:mr-0 text-justify md:text-right">
                     <span class=" md:mr-8 font-bold text-base md:text-lg"> Movie and TV Series Applicaiton</span>
-                    <span class="hidden md:inline-block md:align-middle md:ml-2 md:text-sm md:leading-none mr-8"> <i class="fa-solid fa-arrow-right"></i></span>
+                    <span class="hidden md:inline-block md:align-middle md:ml-2 md:text-sm md:leading-none mr-8"> <i
+                            class="fa-solid fa-arrow-right"></i></span>
                     <p class="md:mr-20 mt-2 text-sm md:text-base">The web application is a dynamic platform that enables
                         users
                         to seamlessly search for movies and TV series. Leveraging The Movie Database (TMDb) API, it
@@ -710,7 +804,8 @@
                 <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
                     class="md:flex-1 mx-3 md:mr-0 text-justify md:text-right">
                     <span class=" md:mr-8 font-bold text-base md:text-lg"> Todo List</span>
-                    <span class="hidden md:inline-block md:align-middle md:ml-2 md:text-sm md:leading-none mr-8"> <i class="fa-solid fa-arrow-right"></i></span>
+                    <span class="hidden md:inline-block md:align-middle md:ml-2 md:text-sm md:leading-none mr-8"> <i
+                            class="fa-solid fa-arrow-right"></i></span>
                     <p class="md:mr-20 mt-2 text-sm md:text-base">The Laravel TodoList project is a dynamic web
                         application
                         designed for efficient task management. Developed with Laravel 10, Bootstrap, and Eloquent for
@@ -795,7 +890,8 @@
                 <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false"
                     class="md:flex-1 mx-3 md:mr-0 text-justify md:text-right">
                     <span class=" md:mr-8 font-bold text-base md:text-lg">Crypto Currency Details</span>
-                    <span class="hidden md:inline-block md:align-middle md:ml-2 md:text-sm md:leading-none mr-8"> <i class="fa-solid fa-arrow-right"></i></span>
+                    <span class="hidden md:inline-block md:align-middle md:ml-2 md:text-sm md:leading-none mr-8"> <i
+                            class="fa-solid fa-arrow-right"></i></span>
                     <p class="md:mr-20 mt-2 text-sm md:text-base">The CryptoCurrency Explorer is a web application
                         developed
                         using ReactJS, Bootstrap, and the Coingecko Cryptocurrency API. It provides users with a
@@ -914,31 +1010,73 @@
 
 <script>
 
+    const button = document.getElementById('button');
+    const navContent = document.getElementById('nav-content');
+    const projectBtn = document.getElementById('project');
+    const dropdown = document.getElementById('drop');
 
-    const showContent = document.getElementById('nav-content')
-    const dropdown = document.getElementById('drop')
-    // document.getElementById('project').addEventListener('click', function (event) {
-    //     dropdownVisibility()
-    // })
-    document.getElementById('button').addEventListener('click', function (event) {
-        toggleVisibility()
-    })
-    function toggleVisibility() {
+    // Toggle mobile menu
+    button.addEventListener('click', () => {
+        navContent.classList.toggle('hidden');
+    });
 
-        if (showContent.classList.contains('hidden')) {
-            showContent.classList.remove('hidden');
-            showContent.classList.add('visible');
-            // showContent.setAttribute('data-aos', 'fade-down');
-            // showContent.setAttribute('data-aos-once', 'false');
-
-            // AOS.init({
-            //     initClassName: "aos-init",
-            //     startEvent: "click",
-            // });
-        } else {
-            showContent.classList.remove('visible');
-            showContent.classList.add('hidden');
-        }
+    // Toggle dropdown
+    function dropdownVisibility() {
+        dropdown.classList.toggle('hidden');
     }
+
+    // Optional: Hide dropdown when clicking outside
+    window.addEventListener('click', (e) => {
+        if (!projectBtn.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.add('hidden');
+        }
+    });
+
+//  const showContent = document.getElementById('nav-content');
+//     const dropdown = document.getElementById('drop');
+
+//     function toggleVisibility() {
+//         if (showContent.classList.contains('hidden')) {
+//             showContent.classList.remove('hidden');
+//             showContent.classList.add('visible');
+//             showContent.setAttribute('data-aos', 'fade-down');
+//             AOS.init({ initClassName: "aos-init", startEvent: "click" });
+//         } else {
+//             showContent.classList.remove('visible');
+//             showContent.classList.add('hidden');
+//         }
+//     }
+
+//     window.addEventListener('click', function (e) {
+//         if (!document.getElementById('project').contains(e.target)) {
+//             dropdown.classList.add('hidden');
+//         }
+//     });
+
+    // const showContent = document.getElementById('nav-content')
+    // const dropdown = document.getElementById('drop')
+    // // document.getElementById('project').addEventListener('click', function (event) {
+    // //     dropdownVisibility()
+    // // })
+    // document.getElementById('button').addEventListener('click', function (event) {
+    //     toggleVisibility()
+    // })
+    // function toggleVisibility() {
+
+    //     if (showContent.classList.contains('hidden')) {
+    //         showContent.classList.remove('hidden');
+    //         showContent.classList.add('visible');
+    //         showContent.setAttribute('data-aos', 'fade-down');
+    //         showContent.setAttribute('data-aos-once', 'false');
+
+    //         AOS.init({
+    //             initClassName: "aos-init",
+    //             startEvent: "click",
+    //         });
+    //     } else {
+    //         showContent.classList.remove('visible');
+    //         showContent.classList.add('hidden');
+    //     }
+    // }
 
 </script>
